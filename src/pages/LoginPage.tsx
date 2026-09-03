@@ -1,0 +1,155 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { User, Lock, Mail, Eye, EyeOff, Clock, ShieldCheck } from 'lucide-react';
+
+export const LoginPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<'associate' | 'staff'>('associate');
+  const [showPassword, setShowPassword] = useState(false);
+
+  // Form states
+  const [associateUsername, setAssociateUsername] = useState('');
+  const [staffEmail, setStaffEmail] = useState('admin@joyclub.associate');
+  const [password, setPassword] = useState('');
+
+  return (
+    <div className="pt-20 min-h-screen bg-[#074d2b] flex flex-col justify-between text-slate-900 selection:bg-[#cfa353]">
+      
+      {/* Top Brand Banner */}
+      <div className="pt-10 pb-8 text-center text-white space-y-3 px-4">
+        {/* Foot Logo */}
+        <div className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mx-auto shadow-xl">
+          <span className="text-3xl">👣</span>
+        </div>
+
+        <div className="space-y-1">
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            JoyClub Associate
+          </h1>
+          <p className="text-xs sm:text-sm text-emerald-100 font-light">
+            Secure access to your wealth dashboard
+          </p>
+        </div>
+      </div>
+
+      {/* Main White Card Container with Rounded Top */}
+      <div className="flex-1 bg-white rounded-t-[2.5rem] p-6 sm:p-12 shadow-2xl flex flex-col items-center justify-start">
+        
+        <div className="w-full max-w-md space-y-6">
+          
+          {/* Tab Switcher: Associate vs Staff */}
+          <div className="p-1 bg-[#eaf4ed] rounded-full flex items-center justify-between border border-emerald-900/10">
+            <button
+              type="button"
+              onClick={() => setActiveTab('associate')}
+              className={`flex-1 py-2.5 rounded-full text-xs font-bold transition-all flex items-center justify-center gap-2 ${
+                activeTab === 'associate'
+                  ? 'bg-white text-[#074d2b] shadow-md'
+                  : 'text-slate-600 hover:text-[#074d2b]'
+              }`}
+            >
+              <User className="w-4 h-4" />
+              <span>Associate</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setActiveTab('staff')}
+              className={`flex-1 py-2.5 rounded-full text-xs font-bold transition-all flex items-center justify-center gap-2 ${
+                activeTab === 'staff'
+                  ? 'bg-white text-[#074d2b] shadow-md'
+                  : 'text-slate-600 hover:text-[#074d2b]'
+              }`}
+            >
+              <Clock className="w-4 h-4" />
+              <span>Staff</span>
+            </button>
+          </div>
+
+          {/* Form Fields */}
+          <form onSubmit={(e) => e.preventDefault()} className="space-y-5 pt-2">
+            
+            {activeTab === 'associate' ? (
+              /* Associate Form */
+              <div className="space-y-1.5">
+                <label className="text-xs font-semibold text-slate-700 block">Username</label>
+                <div className="relative">
+                  <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                  <input
+                    type="text"
+                    value={associateUsername}
+                    onChange={(e) => setAssociateUsername(e.target.value)}
+                    placeholder="Enter username"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#f8faf9] border border-gray-200 text-xs focus:outline-none focus:border-[#074d2b] focus:bg-white transition-colors"
+                  />
+                </div>
+              </div>
+            ) : (
+              /* Staff Form */
+              <div className="space-y-1.5">
+                <label className="text-xs font-semibold text-slate-700 block">Staff email</label>
+                <div className="relative">
+                  <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                  <input
+                    type="email"
+                    value={staffEmail}
+                    onChange={(e) => setStaffEmail(e.target.value)}
+                    placeholder="admin@joyclub.associate"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#f8faf9] border border-gray-200 text-xs focus:outline-none focus:border-[#074d2b] focus:bg-white transition-colors"
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Password Field */}
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between">
+                <label className="text-xs font-semibold text-slate-700">Password</label>
+                <a href="#forgot" className="text-[11px] text-[#074d2b] font-bold hover:underline">Forgot?</a>
+              </div>
+
+              <div className="relative">
+                <Lock className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="........"
+                  className="w-full pl-10 pr-10 py-3 rounded-xl bg-[#f8faf9] border border-gray-200 text-xs focus:outline-none focus:border-[#074d2b] focus:bg-white transition-colors"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 focus:outline-none"
+                >
+                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="w-full py-3.5 rounded-xl bg-[#074d2b] hover:bg-[#05381f] text-white font-bold text-xs tracking-wider uppercase transition-all shadow-lg hover:shadow-xl mt-2"
+            >
+              Sign in
+            </button>
+
+            {/* Footer Link */}
+            <div className="text-center pt-2">
+              <p className="text-xs text-slate-500">
+                New associate?{' '}
+                <Link to="/join" className="text-[#074d2b] font-bold hover:underline">
+                  Join now
+                </Link>
+              </p>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  );
+};
