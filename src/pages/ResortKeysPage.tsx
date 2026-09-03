@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palmtree, Leaf, Heart, Shield, Sparkles, Building, Waves, Trees, Sun, CheckCircle } from 'lucide-react';
+import { Palmtree, Leaf, Heart, Sparkles, Building, Waves, Trees, Sun } from 'lucide-react';
 
 export const ResortKeysPage: React.FC = () => {
   const resortKeysList = [

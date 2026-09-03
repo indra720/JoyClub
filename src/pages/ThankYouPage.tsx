@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palmtree, Heart, Shield, Award, Users, TrendingUp, Phone, Mail, MapPin, Sparkles, Globe, Share2 } from 'lucide-react';
+import { Palmtree, Heart, Shield, Award, Users, TrendingUp, Phone, Mail, MapPin, Globe, Share2 } from 'lucide-react';
 
 export const ThankYouPage: React.FC = () => {
   const coreValues = [

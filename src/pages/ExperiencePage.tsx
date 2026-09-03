@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palmtree, Leaf, Heart, Shield, Sparkles, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 export const ExperiencePage: React.FC = () => {
   const joyPillars = [

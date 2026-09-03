@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palmtree, MapPin, Sparkles, CheckCircle2 } from 'lucide-react';
+
 
 export const GalleryPage: React.FC = () => {
   const masterPlanKey = [

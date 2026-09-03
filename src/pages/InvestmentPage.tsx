@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palmtree, TrendingUp, ShieldCheck, PieChart, Award, DollarSign, Coins } from 'lucide-react';
+import { Palmtree, TrendingUp, ShieldCheck, PieChart, Award, Coins } from 'lucide-react';
 
 export const InvestmentPage: React.FC = () => {
   const revenueStreams = [

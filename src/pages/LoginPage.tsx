@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { User, Lock, Mail, Eye, EyeOff, Clock, ShieldCheck } from 'lucide-react';
+import { User, Lock, Mail, Eye, EyeOff, Clock } from 'lucide-react';
 
 export const LoginPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'associate' | 'staff'>('associate');

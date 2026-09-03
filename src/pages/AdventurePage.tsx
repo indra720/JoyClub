@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Compass, Zap, Activity, Heart, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Compass, Zap, Activity } from 'lucide-react';
 
 export const AdventurePage: React.FC = () => {
   const mainActivities = [

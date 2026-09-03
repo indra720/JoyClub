@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Sparkles, Users, Calendar, ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 
 export const WeddingsPage: React.FC = () => {
   const venues = [

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palmtree, ShieldCheck, Check, FileText, Lock, Calendar } from 'lucide-react';
+import { ShieldCheck, Check } from 'lucide-react';
 
 export const LegalFormationPage: React.FC = () => {
   return (

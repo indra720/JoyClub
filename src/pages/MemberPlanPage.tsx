@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palmtree, Check, ShieldCheck, TrendingUp, DollarSign, Award, PieChart, Clock, Diamond } from 'lucide-react';
+import { Palmtree, Check, ShieldCheck, TrendingUp, DollarSign, Award, Diamond } from 'lucide-react';
 
 export const MemberPlanPage: React.FC = () => {
   return (

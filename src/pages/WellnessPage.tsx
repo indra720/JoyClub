@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Sun, Heart, Leaf, Flower2, Shield, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 export const WellnessPage: React.FC = () => {
   const therapies = [

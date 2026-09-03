@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, Bed, Wifi, Tv, Coffee, ShieldCheck, Star, Calendar } from 'lucide-react';
+import { Check, Calendar } from 'lucide-react';
 
 export const StayPage: React.FC = () => {
   const accommodations = [

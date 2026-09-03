@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Navigation, Building, QrCode, Palmtree, Compass, ShieldCheck, TrendingUp } from 'lucide-react';
+import { MapPin, Mail, Navigation, Building, QrCode, Palmtree, Compass, TrendingUp } from 'lucide-react';
 
 export const LocationPage: React.FC = () => {
   const nearbyPlaces = [

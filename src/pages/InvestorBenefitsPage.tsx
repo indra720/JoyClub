@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palmtree, Gift, ShieldCheck, Check } from 'lucide-react';
+import { Gift, ShieldCheck } from 'lucide-react';
 
 export const InvestorBenefitsPage: React.FC = () => {
   const memberTiers = [

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, ArrowRight, ArrowLeft, Check, Lock, User, Mail, Phone, Upload } from 'lucide-react';
+import { ShieldCheck, ArrowRight, ArrowLeft, Check, Lock } from 'lucide-react';
 
 export const JoinPage: React.FC = () => {
   const [step, setStep] = useState<1 | 2 | 3>(1);
